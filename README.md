@@ -68,7 +68,9 @@ Repositories included: p4factory; behavioral-model; p4ofagent
       |          Soft Switch              |
       |    (compiled from p4 program)     |
       +-----------------------------------+
-      
+
+OvS architecture with P4 capabilities: http://p4.org/wp-content/uploads/2015/07/ovs-plus-p4.png
+
 <Install OvS>
 Install ovs in root mode, "sudo -s" to enter
 
@@ -134,20 +136,38 @@ Install ovs in root mode, "sudo -s" to enter
 		use "ifconfig" to check
 		
 <Install RYU>
+Follow the tutorial: https://github.com/osrg/ryu/wiki/OpenFlow_Tutorial
 
+1. Install or check prereqs
+	sudo apt-get update
+	time sudo apt-get install python-eventlet python-routes python-webob python-paramiko
+	
+2. Download and build RYU
+	git clone git://github.com/osrg/ryu.git 
+	cd ryu
+	sudo python ./setup.py install
+
+3. Run ryu
+	PYTHONPATH=. ./bin/ryu-manager ryu/app/XXX.py
 	
 
 
 
+Reference:
 
+http://p4.org/p4/p4-and-open-vswitch/
 
+https://github.com/blp/ovs-reviews/tree/p4
 
+http://openvswitch.org/support/dist-docs/ovs-ofctl.8.pdf
 
+http://www.pica8.com/document/v2.3/html/ovs-commands-reference/#1081533
 
+http://openvswitch.org/support/dist-docs/
 
+http://ryu.readthedocs.io/en/latest/
 
-
-
+https://github.com/osrg/ryu/tree/master/ryu
 
 
 
