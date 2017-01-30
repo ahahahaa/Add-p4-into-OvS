@@ -5,7 +5,7 @@ Build a server based on Linux system, with ryu controller for OvS, and adding p4
 
 Basically, install ovs, p4 and ryu into ubuntu 14.04 system in vmware virtual machine.
 
-<Install P4>
+Install P4
 Repositories included: p4factory; behavioral-model; p4ofagent
 
 1. git clone repositories' web URL from https://github.com/p4lang
@@ -71,7 +71,7 @@ Repositories included: p4factory; behavioral-model; p4ofagent
 
 OvS architecture with P4 capabilities: http://p4.org/wp-content/uploads/2015/07/ovs-plus-p4.png
 
-<Install OvS>
+Install OvS
 Install ovs in root mode, "sudo -s" to enter
 
 1. Install ssh server and dependencies
@@ -135,7 +135,7 @@ Install ovs in root mode, "sudo -s" to enter
 	ifconfig br0 192.168.1.20 netmask 255.255.255.0 up
 		use "ifconfig" to check
 		
-<Install RYU>
+Install RYU
 Follow the tutorial: https://github.com/osrg/ryu/wiki/OpenFlow_Tutorial
 
 1. Install or check prereqs
