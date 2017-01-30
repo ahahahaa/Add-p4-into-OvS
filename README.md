@@ -47,6 +47,8 @@ Repositories included: p4factory; behavioral-model; p4ofagent
       make install
           if error like "fatal error: bm/pdfixed/pd_pre.h: No such file or directory #include <bm/pdfixed/pd_pre.h>", copied the bm file in behavioral-model/pdfixed/include into p4ofagent/inc
       
+      p4ofagent/p4src# vim openflow.p4
+      
       
       +-----------------------------------+
       |      Openflow Controller          | 
