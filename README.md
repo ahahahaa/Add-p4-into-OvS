@@ -22,6 +22,8 @@ Repositories included: p4factory; behavioral-model; p4ofagent
       
       make bm
           if fail, because the setup veth interface error, get into p4factory/tools/, run ./veth_teardown.sh and ./veth_setup.sh
+	  
+      in p4factory/targets/switch/, Openflow integration is already done with openflow.p4. 
       
 4. Install "behavioral-model": P4 software switch version 2
       git clone https://github.com/p4lang/behavioral-model.git
@@ -47,8 +49,15 @@ Repositories included: p4factory; behavioral-model; p4ofagent
       make install
           if error like "fatal error: bm/pdfixed/pd_pre.h: No such file or directory #include <bm/pdfixed/pd_pre.h>", copied the bm file in behavioral-model/pdfixed/include into p4ofagent/inc
       
-      p4ofagent/p4src# vim openflow.p4
+    Add openflow to bm target:
+      step1:
+      Modify p4ofagent/p4src# vim openflow.p4 to meet specific requirements, example as p4factory/targets/switch
       
+      step2:
+      Write Mapping file that tells the behavioral model which P4 tables to expose as Openflow tables
+      
+      step3:
+      Edit Makefile: in "main.c" add a call to "p4ofagent_init" (defined in p4ofagent.c)
       
       +-----------------------------------+
       |      Openflow Controller          | 
