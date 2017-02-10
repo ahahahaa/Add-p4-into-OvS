@@ -17,7 +17,7 @@ So these two VM run in Bridge or internal mode and install Ubuntu 14.04 Linux sy
 
 
 ##2. Install Open vSwitch(OvS)
-#Install ovs in root mode, "sudo -s" to enter.
+Install ovs in root mode, "sudo -s" to enter.
 
 1. Install ssh server and dependencies
 	apt-get update
@@ -100,11 +100,11 @@ ovsdb-server /usr/local/etc/openvswitch/conf.db \
  
  
 
-#more command use ‘ovs-vsctl --help’, ‘ovs-ofctl --help’, ‘ovs-vswitchd --help’
+more command use ‘ovs-vsctl --help’, ‘ovs-ofctl --help’, ‘ovs-vswitchd --help’
 
 
 ##3. Install RYU
-#Download and install RYU. Follow the tutorial:
+Download and install RYU. Follow the tutorial:
 https://github.com/osrg/ryu/wiki/OpenFlow_Tutorial
 
 1. Install or check prereqs
@@ -116,7 +116,7 @@ https://github.com/osrg/ryu/wiki/OpenFlow_Tutorial
 	cd ryu
 	sudo python ./setup.py install
 
-#Then set TLS Connection with OvS follow the tutorial: 
+Then set TLS Connection with OvS follow the tutorial: 
 http://ryu.readthedocs.io/en/latest/tls.html
 
 1. Configure public key infrastructure (if don’t have a PKI)
@@ -168,10 +168,10 @@ ryu-manager --ctl-privkey ctl-privkey.pem \
 
 
 ##4. Install P4
-#Repositories included: p4factory; behavioral-model; p4ofagent
+Repositories included: p4factory; behavioral-model; p4ofagent
 git clone repositories' web URL from https://github.com/p4lang
       
-#Connect to GitHub with SSH. Follow the tutorials:
+Connect to GitHub with SSH. Follow the tutorials:
 https://help.github.com/articles/generating-an-ssh-key/
 
 
@@ -216,7 +216,7 @@ make install
 http://p4.org/wp-content/uploads/2015/07/ovs-plus-p4.png
 
 
-#Add openflow to bm target:
+Add openflow to bm target:
 step1:
 Modify p4ofagent/p4src# vim openflow.p4 to meet specific requirements, example as p4factory/targets/switch
       
